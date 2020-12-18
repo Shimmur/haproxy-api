@@ -10,4 +10,4 @@ config_file = "/tmp/haproxy.cfg"      # Where to write the config
 pid_file    = "/tmp/haproxy.pid"  # Where to write the HAproxy pid file
 
 [sidecar]
-state_url = "http://localhost:7777/state.json" # Where to fetch our initial state
+state_url = "http://singularity.uw2.dev.sms.community/:7777/api/state.json" # Where to fetch our initial state
