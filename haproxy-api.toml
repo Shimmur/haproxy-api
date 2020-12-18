@@ -5,7 +5,7 @@ logging_level = "info" # or "debug", or "error", etc
 
 [haproxy]
 bind_ip     = "192.168.168.168"       # Bind IP for HAproxy itself
-template    = "./templates/haproxy.cfg" # Template to use for HAproxy
+template    = "templates/haproxy.cfg" # Template to use for HAproxy
 config_file = "/tmp/haproxy.cfg"      # Where to write the config
 pid_file    = "/tmp/haproxy.pid"  # Where to write the HAproxy pid file
 
