@@ -24,6 +24,16 @@ combination with the `-F` flag or by supplying the `HAPROXY_API_FOLLOW`
 environment variable where the vlaue is `hostname:port` of a remote or local
 Sidecar.
 
+Building it
+-----------
+
+... is simple. Just run `go build`.
+
+Running it
+----------
+
+... is equally simple. Just run `??? Ask Karl (again :)) ???`.
+
 Configuration
 -------------
 
