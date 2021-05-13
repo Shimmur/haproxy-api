@@ -54,16 +54,35 @@ Health Checking
 endpoint. This in turn simply checks to make sure that HAproxy is currently
 running by shelling out to `bash`, `ps`, and `grep`.
 
-Contributing
+Installation
 ------------
 
-Contributions are more than welcome. Bug reports with specific reproduction steps are great. If you have a code contribution you'd like to make, open a pull request with suggested code.
+From the source code ...
 
-Pull requests should:
+* install golang
+* clone the repo
+* run `make test && make build`
 
- * Clearly state their intent in the title
- * Have a description that explains the need for the changes
- * Include tests!
- * Not break the public API
+Running
+-------
 
-Ping us to let us know you're working on something interesting by opening a GitHub Issue on the project.
+You (obviously) need to have haproxy installed (`sudo apt install haproxy`).
+
+And you might need to add an alias on the loopback by running `sudo ./alias.sh`.
+
+You then need to edit the `haproxy-api.toml` file to point to your
+singularity instance/installation.
+
+Note: If your singularity instance is on a VPN you need to get access to the VPN.
+
+You can then start `haproxy` with ...
+
+```bash
+./haproxy-api --config-file ./haproxy-api.toml
+```
+
+... with (in follow mode) ...
+
+```bash
+./haproxy-api -F <singularity-ip:singularity-port>
+```
